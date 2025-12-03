@@ -1,110 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Experiment Arc</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Experiment Arc — Tech, Freedom, Philosophy & Vibes</title>
+  <meta name="description" content="I'm a High-School Student from Delhi (India). I create content around tech, Freedom, Philosophy and Vibes." />
+
+  <!-- Use the same image (fast.jpg) as favicon -->
+  <link rel="icon" href="fast.jpg" />
+
   <style>
-    /* Catppuccin Mocha Palette */
-    :root {
-      --base: #1e1e2e;
-      --mantle: #181825;
-      --crust: #11111b;
+    /* Catppuccin Mocha inspired color variables */
+    :root{
+      --bg: #1e1e2e;
+      --surface: #313244;
+      --muted: #6c6f85;
       --text: #cdd6f4;
-      --subtext0: #a6adc8;
-      --overlay0: #6c7086;
-      --rosewater: #f5e0dc;
-      --lavender: #b4befe;
-      --blue: #89b4fa;
-      --green: #a6e3a1;
-      --yellow: #f9e2af;
-      --red: #f38ba8;
-      --pink: #f5c2e7;
-      --maroon: #eba0ac;
-      --peach: #fab387;
-      --teal: #94e2d5;
+      --accent: #89b4fa; /* blue */
+      --highlight: #f9e2af; /* yellow/peach */
+      --accent-2: #f5c2e7; /* pink */
     }
 
-    body {
-      margin: 0;
-      font-family: "Inter", sans-serif;
-      background-color: var(--crust);
+    /* Reset + enforce no rounded corners and no animations */
+    *, *::before, *::after { box-sizing: border-box; border-radius: 0 !important; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
       color: var(--text);
-      display: flex;
-      justify-content: center;
-      padding: 40px 20px;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
     }
 
-    .container {
-      max-width: 700px;
-      background-color: var(--base);
-      padding: 30px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-      text-align: center;
+    /* layout */
+    .wrap{
+      max-width:900px;
+      margin:32px auto;
+      padding:28px;
     }
 
-    img {
-      width: 100%;
-      
-      margin-bottom: 20px;
+    header {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:20px;\    }
+
+    img.hero{
+      width:100%;
+      height:auto;
+      display:block;
+      object-fit:cover;
+      border:0;
+      background:var(--surface);
     }
 
-    h1 {
-      font-size: 1.8rem;
-      color: var(--lavender);
-      margin-bottom: 15px;
+    main {
+      margin-top:20px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      padding:22px;
+      border:1px solid rgba(255,255,255,0.03);
     }
 
-    p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: var(--subtext0);
-      margin-bottom: 20px;
-    }
+    h1{ margin:0 0 10px 0; font-size:20px; color:var(--text); }
+    p.lead{ margin:0 0 18px 0; color:var(--text); font-size:16px; }
 
-    a {
-      color: var(--blue);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    a:hover {
-      color: var(--lavender);
+    .kofi {
+      display:inline-block;
+      padding:10px 14px;
+      text-decoration:none;
+      background:var(--highlight);
+      color:#111;
+      font-weight:600;
+      border:0;
     }
 
     .links {
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+      margin-top:18px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 14px;
     }
 
-    .links a {
-      padding: 10px;
-      background-color: var(--crust);
-      
+    .links a{
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:600;
+      border-bottom:1px dashed transparent;
+    }
+    .links a:focus, .links a:hover{ text-decoration:underline; }
+
+    footer{
+      margin-top:28px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* small screens */
+    @media (max-width:640px){
+      .wrap{ margin:18px;padding:16px; }
+      h1{ font-size:18px }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div style="display: flex; align-items: center; gap: 15px; justify-content: center;">
-      <img src="fast.jpg" alt="Logo" style="width: 70px; height: 70px; object-fit: cover;">
-      <h1>Experiment Arc</h1>
-    </div>
+  <div class="wrap">
+    <header>
+      <!-- user provided image file must be placed next to index.html in the repo -->
+      <img class="hero" src="fast.jpg" alt="fast.jpg — experiment arc" />
+    </header>
 
-    <p>I'm a High-School student from Delhi (India)<br>
-    I create content about tech, open-source, Freedom and Unix Philosophy.</p>
+    <main>
+      <h1>I'm a High-School Student from Delhi (India)</h1>
+      <p class="lead">I create content around <strong>tech</strong>, <strong>Freedom</strong>, <strong>Philosophy</strong> and <strong>Vibes</strong></p>
 
-    <p>Support me, my content and my projects on <a href="https://ko-fi.com/experimentarc">Ko-Fi</a></p>
+      <p>
+        <a class="kofi" href="https://ko-fi.com/experimentarc" target="_blank" rel="noopener noreferrer">Support me on Ko-fi</a>
+      </p>
 
-    <h2 style="color: var(--peach); margin-top: 30px;">Follow me</h2>
+      <div class="links" aria-label="Social links">
+        <a href="https://www.youtube.com/channel/UCi4AJ0eBbUeZgQRz7mKslWA" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://bsky.app/profile/experimentarc.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a>
+        <a href="https://intagram.com/_experiment_arc_/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://lichess.org/@/Experiment-Arc" target="_blank" rel="noopener noreferrer">Lichess</a>
+      </div>
 
-    <div class="links">
-      <a href="https://www.youtube.com/channel/UCi4AJ0eBbUeZgQRz7mKslWA" target="_blank">YouTube</a>
-      <a href="https://bsky.app/profile/experimentarc.bsky.social" target="_blank">Bluesky</a>
-      <a href="https://instagram.com/_experiment_arc_/" target="_blank">Instagram</a>
-      <a href="https://lichess.org/@/Experiment-Arc" target="_blank">Lichess</a>
-    </div>
+      <footer>
+        <p>Made with Catppuccin — Mocha palette. No rounded corners, no animations.</p>
+      </footer>
+    </main>
   </div>
 </body>
 </html>
