@@ -1,12 +1,109 @@
-<html>
-    <head>
-        <title>My First Web Page</title>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiment Arc</title>
+  <style>
+    /* Catppuccin Mocha Palette */
+    :root {
+      --base: #1e1e2e;
+      --mantle: #181825;
+      --crust: #11111b;
+      --text: #cdd6f4;
+      --subtext0: #a6adc8;
+      --overlay0: #6c7086;
+      --rosewater: #f5e0dc;
+      --lavender: #b4befe;
+      --blue: #89b4fa;
+      --green: #a6e3a1;
+      --yellow: #f9e2af;
+      --red: #f38ba8;
+      --pink: #f5c2e7;
+      --maroon: #eba0ac;
+      --peach: #fab387;
+      --teal: #94e2d5;
+    }
 
-    <body>
-<h1>Hello World!</h1>
-<p>This is my first Webpage.</p>
-    </body>
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background-color: var(--crust);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
 
+    .container {
+      max-width: 700px;
+      background-color: var(--base);
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      text-align: center;
+    }
+
+    img {
+      width: 100%;
+      
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      color: var(--lavender);
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--subtext0);
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover {
+      color: var(--lavender);
+    }
+
+    .links {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .links a {
+      padding: 10px;
+      background-color: var(--crust);
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="fast.jpg" alt="Banner" />
+
+    <h1>Experiment Arc</h1>
+
+    <p>I'm a High-School student from Delhi (India)<br>
+    I create content about tech, open-source, Freedom and Unix Philosophy.</p>
+
+    <p>Support me, my content and my projects on <a href="https://ko-fi.com/experimentarc">Ko-Fi</a></p>
+
+    <h2 style="color: var(--peach); margin-top: 30px;">Follow me</h2>
+
+    <div class="links">
+      <a href="https://www.youtube.com/channel/UCi4AJ0eBbUeZgQRz7mKslWA" target="_blank">YouTube</a>
+      <a href="https://bsky.app/profile/experimentarc.bsky.social" target="_blank">Bluesky</a>
+      <a href="https://instagram.com/_experiment_arc_/" target="_blank">Instagram</a>
+      <a href="https://lichess.org/@/Experiment-Arc" target="_blank">Lichess</a>
+    </div>
+  </div>
+</body>
 </html>
-
