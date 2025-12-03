@@ -12,13 +12,14 @@
   <style>
     /* Catppuccin Mocha inspired color variables */
     :root{
-      --bg: #1e1e2e;
-      --surface: #313244;
-      --muted: #6c6f85;
+      /* Refined Catppuccin Mocha palette — higher contrast, cleaner look */
+      --bg: #181825;
+      --surface: #1e1e2e;
+      --muted: #a6adc8;
       --text: #cdd6f4;
-      --accent: #89b4fa; /* blue */
-      --highlight: #f9e2af; /* yellow/peach */
-      --accent-2: #f5c2e7; /* pink */
+      --accent: #98c1fe; /* softened blue */
+      --highlight: #f8e3a7; /* cleaner warm highlight */
+      --accent-2: #f2b8e4; /* softer pink */
     }
 
     /* Reset + enforce no rounded corners and no animations */
@@ -49,11 +50,13 @@
 
     img.hero{
       width:100%;
+      max-width:500px;
       height:auto;
       display:block;
       object-fit:cover;
       border:0;
       background:var(--surface);
+      margin:0 auto;
     }
 
     main {
